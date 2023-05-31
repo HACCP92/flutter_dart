@@ -1,4 +1,4 @@
-import 'slime.dart';
+import '../bin/slime.dart';
 import 'dart:math';
 
 class Hero {
