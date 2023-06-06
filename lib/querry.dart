@@ -50,7 +50,7 @@ void main() {
     ..forEach((e) => print('알파벳순으로 정렬 ${e}'));
   // 5. 밀라노에 거래자가 있습니까?
   final traderPerson = transactions.any((e) => e.trader.city == 'Milan');
-  print('밀라노에 거래자 : ${traderPerson}');
+  print('밀라노 거래자 : ${traderPerson}');
   // 6. 케임브리지에 거주하는 거래자의 모든 트랙잭션값을 출력하시오
   transactions.where((e) => e.trader.city == 'Cambridge').forEach((e) {
     print('케임브리지 트랜잭션값 : ${e.value}');
