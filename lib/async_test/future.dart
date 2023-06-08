@@ -18,7 +18,7 @@ Future<void> copyText(
   try {
     final data = await File(sourcePath).readAsString();
     final text = data.replaceAll(replaceFrom, replaceTo);
-    await File('lib/async_test/furture').writeAsString(text);
+    await File('lib/async_test/sample.csv').writeAsString(text);
   } catch (err) {
     throw Exception('파일 복사 중에 오류가 발생!: $err');
   }
@@ -26,8 +26,8 @@ Future<void> copyText(
 
 void main() async {
   try {
-    await copyText('lib/async_test/furture', '김석봉', '한석봉');
-    print(await File('lib/async_test/furture').readAsString());
+    await copyText('lib/async_test/sample.csv', '김석봉', '한석봉');
+    print(await File('lib/async_test/sample.csv').readAsString());
   } catch (error) {
     print(error);
   }
