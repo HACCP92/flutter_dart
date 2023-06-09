@@ -1,6 +1,6 @@
 //범석님, 정인님, 신비님, 연주님 감사합니다.
-class MovieInfo {
-  MovieInfo({
+class Movies {
+  Movies({
     required this.dates,
     required this.page,
     required this.results,
@@ -13,7 +13,7 @@ class MovieInfo {
   late final int totalPages;
   late final int totalResults;
 
-  MovieInfo.fromJson(Map<String, dynamic> json) {
+  Movies.fromJson(Map<String, dynamic> json) {
     dates = Dates.fromJson(json['dates']);
     page = json['page'];
     results =
