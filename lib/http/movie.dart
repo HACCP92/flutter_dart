@@ -5,7 +5,7 @@ import 'json_model/movie_json.dart';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  final movies  = await getMovies();
+  final movies  = await getMovieInfo();
   final movieTitles = await movies.print(movieTitles);
 
   final firstMovieId = movies[298618].id;
@@ -23,7 +23,7 @@ Future<List<Results>> getMovieInfo() async {
       'https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1'));
   final json = jsonDecode(response.body);
 
-  return MovieInfo.fromJson(json).results;
+  return Movies.fromJson(json).results;
 }
 
 Future<MovieDetail> getMovieDetail(int movieId) async {
