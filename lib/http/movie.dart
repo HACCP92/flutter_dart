@@ -5,10 +5,10 @@ import 'json_model/movie_json.dart';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  final movies movieInfo = await getMovies();
-  final movieTitles = await movieInfo.print(movieTitles);
+  final movies  = await getMovies();
+  final movieTitles = await movies.print(movieTitles);
 
-  final firstMovieId = movieInfo[298618].id;
+  final firstMovieId = movies[298618].id;
   final movieDetail = await getMovieDetail(firstMovieId);
   print('영화제목 : ${movieDetail.title}');
   print('영화설명 : ${movieDetail.overview}');
